@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="org.apache.cordova.ssh"
+      version="0.1.0">
+
+    <name>SSH</name>
+    <description>Cordova SSH Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,ssh</keywords>
+
+    <js-module src="www/ssh.js" name="ssh">
+        <merges target="navigator.ssh" />
+		
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ssh">
+                <param name="android-package" value="org.apache.cordova.ssh.ssh"/>
+            </feature>
+        </config-file>
+		
+		<manifest> 
+			<uses-permission android:name="android.permission.INTERNET" />
+		</manifest>
+
+        <source-file src="src/android/ssh.java" target-dir="src/org/apache/cordova/ssh" />
+    </platform>
+
+</plugin>
