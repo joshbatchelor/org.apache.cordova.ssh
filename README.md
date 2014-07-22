@@ -1,14 +1,12 @@
-cordova-plugin-startapp
+cordova-plugin-ssh
 ===========================================================================
 
-Phonegap 3.0.0 plugin for launch other application in android device.
 
+Install: ```cordova plugin add https://github.com/lampaa/org.apache.cordova.ssh.git```
 
-Install: ```cordova plugin add https://github.com/lampaa/org.apache.cordova.startapp.git```
-
-Delete:  ```cordova plugin rm org.apache.cordova.startapp```
+Delete:  ```cordova plugin rm org.apache.cordova.ssh```
 
 use: 
 ```js
-navigator.startApp("com.example.hello");
+//navigator.startApp("com.example.hello");
 ```
